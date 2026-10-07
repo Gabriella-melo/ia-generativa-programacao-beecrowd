@@ -3,7 +3,7 @@ from radon.metrics import mi_visit, h_visit, mi_compute
 from radon.raw import analyze
 from radon.visitors import ComplexityVisitor
 import sys
-D=sys.argv[1] if len(sys.argv)>1 else '../codigos'
+D=sys.argv[1] if len(sys.argv)>1 else 'codigos'
 cfg_art=["--disable=C0114,C0115,C0116","--module-naming-style=any","--disable=C0304"]
 cfg_def=["--module-naming-style=any","--disable=C0304"]  # docstrings ON
 rows=[]

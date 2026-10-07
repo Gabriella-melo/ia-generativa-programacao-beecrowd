@@ -1,0 +1,91 @@
+problema,faixa,ferramenta,execucao,modelo_exibido,data,aceito_1a,rodadas,resultado_final,veredito_1a,veredito_2a,veredito_3a,pylint,pylint_sem_C0303,pylint_com_docstring,cc_total,mi,mi_sem_comentarios,loc,densidade_comentarios,forma,tempo_s
+1027,Difícil,chatgpt,1,GPT-5.6 Luna,09/09/2026,0,,Falha,Wrong Answer,Presentation Error,Wrong Answer,10.0,10.0,9.27,10,47.7,47.7,41,0.0,com funções,
+1027,Difícil,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,,Falha,Wrong Answer,Wrong Answer,Wrong Answer,9.83,9.83,9.33,27,37.5,37.5,61,0.0,com funções,
+1027,Difícil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,7.54,7.54,7.19,17,53.87,43.19,54,0.0357,com funções,1.812
+1027,Difícil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.77,8.77,8.46,23,39.05,39.33,66,0.0,com funções,0.214
+1027,Difícil,gemini,1,Gemini 3.6 Flash,09/09/2026,0,2.0,Accepted,Wrong Answer,Accepted,-,7.44,8.9,7.2,29,48.48,33.53,88,0.0638,com funções,0.195
+1027,Difícil,gemini,2,Gemini 3.6 Flash,15/09/2026,0,2.0,Accepted,Time Limit Exceeded,Accepted,-,6.18,9.27,5.82,17,64.0,43.4,55,0.127,com funções,0.227
+1032,Médio,chatgpt,1,GPT-5.6 Luna,09/09/2026,0,2.0,Accepted,Wrong Answer,Accepted,-,9.52,9.52,8.57,21,37.73,37.73,63,0.0,com funções,0.002
+1032,Médio,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.71,9.71,8.57,11,48.66,48.66,35,0.0,com funções,0.006
+1032,Médio,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.79,9.79,8.94,17,51.52,43.1,48,0.0204,com funções,0.012
+1032,Médio,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.51,9.51,8.54,12,46.24,46.24,41,0.0,com funções,0.02
+1032,Médio,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.28,9.66,7.24,9,52.25,52.25,29,0.0,com funções,0.0
+1032,Médio,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.86,9.29,7.14,9,70.88,52.54,28,0.0968,com funções,0.0
+1033,Médio,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.12,9,67.89,44.71,41,0.1277,com funções,0.04
+1033,Médio,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,2.0,Accepted,Wrong Answer,Accepted,-,10.0,10.0,8.7,8,51.65,51.65,23,0.0,com funções,0.006
+1033,Médio,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.26,9.26,8.15,6,49.14,49.84,26,0.0,com funções,0.005
+1033,Médio,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.38,9.38,8.44,7,47.02,47.31,32,0.0,com funções,0.006
+1033,Médio,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,7.43,8.57,6.29,10,59.59,38.51,54,0.0847,com funções,0.099
+1033,Médio,gemini,2,Gemini 3.6 Flash,15/09/2026,0,2.0,Accepted,Wrong Answer,Accepted,-,7.57,8.65,6.49,11,53.49,43.47,41,0.0238,com funções,0.035
+1034,Difícil,chatgpt,1,GPT-5.6 Luna,09/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Presentation Error,9.63,9.63,8.89,7,67.3,52.02,27,0.069,com funções,
+1034,Difícil,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,2.0,Accepted,Time Limit Exceeded,Accepted,-,6.82,6.82,5.91,7,55.47,55.47,22,0.0,com funções,0.803
+1034,Difícil,claude,1,Claude Sonnet 5,09/09/2026,0,,Falha,Time Limit Exceeded,Runtime Error,Time Limit Exceeded,7.59,7.59,6.9,10,50.44,51.47,26,0.0,com funções,
+1034,Difícil,claude,2,Claude Sonnet 5,15/09/2026,0,,Falha,Time Limit Exceeded,Runtime Error,Time Limit Exceeded,8.67,8.67,8.0,8,50.89,51.88,27,0.0,com funções,
+1034,Difícil,gemini,1,Gemini 3.6 Flash,09/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Time Limit Exceeded,5.83,8.75,5.0,8,52.59,52.98,24,0.0,com funções,
+1034,Difícil,gemini,2,Gemini 3.6 Flash,15/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Time Limit Exceeded,7.31,10.0,6.54,8,52.5,52.5,26,0.0,com funções,
+1084,Difícil,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.57,9.57,8.7,11,53.14,53.55,23,0.0,com funções,0.095
+1084,Difícil,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,3.0,Accepted,Presentation Error,Presentation Error,Accepted,10.0,10.0,9.23,10,51.29,51.65,26,0.0,com funções,0.1
+1084,Difícil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.2,9.2,8.4,8,52.37,53.95,22,0.0,com funções,0.131
+1084,Difícil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.2,9.2,8.4,8,52.66,54.24,22,0.0,com funções,0.092
+1084,Difícil,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,6.3,9.26,5.56,10,50.87,51.22,27,0.0,com funções,0.097
+1084,Difícil,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.04,10.0,6.3,10,50.87,51.22,27,0.0,com funções,0.09
+1092,Difícil,chatgpt,1,GPT-5.6 Luna,09/09/2026,0,,Falha,Wrong Answer,Time Limit Exceeded,Time Limit Exceeded,8.22,8.22,7.95,28,59.27,35.78,74,0.1685,com funções,
+1092,Difícil,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,,Falha,Wrong Answer,Wrong Answer,Time Limit Exceeded,9.0,9.0,8.71,25,57.2,36.27,73,0.131,com funções,
+1092,Difícil,claude,1,Claude Sonnet 5,09/09/2026,0,,Falha,Runtime Error,Time Limit Exceeded,Time Limit Exceeded,8.36,8.36,7.95,18,42.11,36.38,72,0.0137,com funções,
+1092,Difícil,claude,2,Claude Sonnet 5,15/09/2026,0,,Falha,Runtime Error,Time Limit Exceeded,Wrong Answer,8.04,8.04,7.61,11,50.82,43.42,44,0.0222,com funções,
+1092,Difícil,gemini,1,Gemini 3.6 Flash,09/09/2026,0,,Falha,Time Limit Exceeded,Wrong Answer,Wrong Answer,5.51,8.16,5.1,25,66.53,40.52,50,0.2188,com funções,
+1092,Difícil,gemini,2,Gemini 3.6 Flash,15/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Wrong Answer,5.6,8.8,5.2,23,62.13,39.8,50,0.1525,com funções,
+1131,Fácil,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,9.57,7,54.66,54.66,25,0.0,script linear,0.0
+1131,Fácil,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,9.52,7,55.45,55.45,23,0.0,script linear,0.0
+1131,Fácil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.14,9.14,8.57,8,49.43,50.23,34,0.0,com funções,0.0
+1131,Fácil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.12,9.12,8.53,7,50.33,51.15,33,0.0,com funções,0.0
+1131,Fácil,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.42,10.0,7.89,10,47.27,47.27,41,0.0,com funções,0.0
+1131,Fácil,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,9.46,10,47.79,47.79,39,0.0,com funções,0.0
+1141,Difícil,chatgpt,1,GPT-5.6 Luna,09/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Runtime Error,9.45,9.45,9.22,35,40.69,27.29,131,0.0507,com funções,
+1141,Difícil,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,,Falha,Runtime Error,Time Limit Exceeded,Time Limit Exceeded,9.62,9.62,9.43,32,39.28,25.62,162,0.0526,com funções,
+1141,Difícil,claude,1,Claude Sonnet 5,09/09/2026,0,,Falha,Memory Limit Exceeded,Time Limit Exceeded,Time Limit Exceeded,9.47,9.47,9.24,22,38.93,28.79,135,0.0288,com funções,
+1141,Difícil,claude,2,Claude Sonnet 5,15/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Memory Limit Exceeded,8.33,8.33,8.0,22,47.71,35.65,90,0.0426,com funções,
+1141,Difícil,gemini,1,Gemini 3.6 Flash,09/09/2026,0,,Falha,Time Limit Exceeded,Time Limit Exceeded,Não extraível,5.58,8.27,5.19,20,40.19,40.89,52,0.0,com funções,
+1141,Difícil,gemini,2,Gemini 3.6 Flash,15/09/2026,0,,Falha,Time Limit Exceeded,Wrong Answer,Wrong Answer,6.67,9.39,6.06,11,66.04,49.22,33,0.0833,com funções,
+1243,Médio,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,9.38,11,57.39,57.93,17,0.0,script linear,0.09
+1243,Médio,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.44,9.44,8.89,10,57.9,58.37,20,0.0,script linear,0.084
+1243,Médio,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.26,9.26,8.15,11,51.73,51.73,29,0.0,com funções,0.082
+1243,Médio,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.23,9.23,8.08,11,52.36,52.36,27,0.0,com funções,0.077
+1243,Médio,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,9.62,9.62,8.85,10,66.83,52.01,29,0.0645,com funções,0.029
+1243,Médio,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.39,10.0,7.42,12,49.63,49.91,34,0.0,com funções,0.032
+1253,Fácil,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,6.67,10.0,5.0,3,71.29,67.45,9,0.0,script linear,0.781
+1253,Fácil,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.33,3,71.29,67.45,9,0.0,script linear,0.546
+1253,Fácil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.5,8.5,7.5,4,57.2,58.74,17,0.0,com funções,0.093
+1253,Fácil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.5,8.5,7.5,4,57.2,58.74,17,0.0,com funções,0.076
+1253,Fácil,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.18,10.0,7.27,7,66.49,54.24,23,0.0417,com funções,0.132
+1253,Fácil,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.6,9.6,6.8,8,64.22,52.66,26,0.037,com funções,0.13
+1961,Fácil,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.57,4,68.55,68.55,8,0.0,script linear,0.0
+1961,Fácil,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.57,4,68.55,68.55,8,0.0,script linear,0.0
+1961,Fácil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.12,8.12,6.88,5,60.62,61.89,14,0.0,com funções,0.0
+1961,Fácil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.12,8.12,6.88,5,60.62,61.89,14,0.0,com funções,0.0
+1961,Fácil,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.0,10.0,6.67,6,59.6,60.21,15,0.0,com funções,0.0
+1961,Fácil,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.33,10.0,6.0,6,59.6,60.21,15,0.0,com funções,0.0
+2253,Médio,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.33,11,68.71,62.15,12,0.0,script linear,0.032
+2253,Médio,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,6.0,10.0,4.0,13,68.16,60.69,11,0.0,script linear,0.0
+2253,Médio,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.85,12,52.33,52.33,27,0.0,com funções,0.001
+2253,Médio,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,9.05,9.05,8.1,10,55.43,55.43,22,0.0,com funções,0.048
+2253,Médio,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.0,9.6,7.2,12,70.49,54.86,27,0.069,com funções,0.0
+2253,Médio,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.0,9.6,7.2,12,52.32,52.32,27,0.0,com funções,0.0
+2437,Fácil,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,5.0,1,83.28,83.28,2,0.0,script linear,0.0
+2437,Fácil,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,5.0,1,83.28,83.28,2,0.0,script linear,0.0
+2437,Fácil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,5.0,1,83.28,83.28,2,0.0,script linear,0.0
+2437,Fácil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,5.0,1,83.28,83.28,2,0.0,script linear,0.0
+2437,Fácil,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,6.0,6.0,4.0,3,65.78,65.78,10,0.0,com funções,0.0
+2437,Fácil,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,5.56,5.56,3.33,3,66.78,66.78,9,0.0,com funções,0.025
+2551,Fácil,chatgpt,1,GPT-5.6 Luna,09/09/2026,0,,Falha,Presentation Error,Presentation Error,Presentation Error,9.5,9.5,8.5,6,68.48,55.41,20,0.0476,com funções,
+2551,Fácil,chatgpt,2,GPT-5.6 Luna,15/09/2026,0,,Falha,Presentation Error,Presentation Error,Presentation Error,10.0,10.0,9.55,5,55.74,55.74,22,0.0,script linear,
+2551,Fácil,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.57,8.57,7.62,5,56.36,57.82,18,0.0,com funções,0.0
+2551,Fácil,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.27,7.27,6.36,5,55.92,57.31,19,0.0,com funções,0.0
+2551,Fácil,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,6.19,8.57,5.24,6,55.82,55.82,21,0.0,com funções,0.0
+2551,Fácil,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.62,10.0,6.67,6,55.82,55.82,21,0.0,com funções,0.0
+2867,Médio,chatgpt,1,GPT-5.6 Luna,09/09/2026,1,1.0,Accepted,Accepted,-,-,10.0,10.0,8.75,4,59.95,59.95,17,0.0,com funções,0.0
+2867,Médio,chatgpt,2,GPT-5.6 Luna,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.0,9.0,7.0,3,66.86,66.86,11,0.0,script linear,0.005
+2867,Médio,claude,1,Claude Sonnet 5,09/09/2026,1,1.0,Accepted,Accepted,-,-,8.24,8.24,7.06,3,61.01,62.85,14,0.0,com funções,0.015
+2867,Médio,claude,2,Claude Sonnet 5,15/09/2026,1,1.0,Accepted,Accepted,-,-,8.24,8.24,7.06,3,61.01,62.85,14,0.0,com funções,0.091
+2867,Médio,gemini,1,Gemini 3.6 Flash,09/09/2026,1,1.0,Accepted,Accepted,-,-,7.0,9.0,6.0,6,55.66,55.66,21,0.0,com funções,0.0
+2867,Médio,gemini,2,Gemini 3.6 Flash,15/09/2026,1,1.0,Accepted,Accepted,-,-,7.27,8.64,6.36,7,55.16,55.16,23,0.0,com funções,0.0

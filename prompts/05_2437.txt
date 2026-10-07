@@ -1,0 +1,33 @@
+﻿Resolva o seguinte problema de programação em Python 3.
+Responda apenas com o código-fonte completo, sem explicações.
+Entregue o código inteiro dentro de um único bloco de código.
+A entrada deve ser lida da entrada padrão (stdin) e a saída escrita
+na saída padrão (stdout), exatamente no formato especificado.
+
+Manhattan Distance
+
+Maria is a resident of Nlogopolis, a city in Nlogonia that has a very interesting characteristic: all the streets in the city are either oriented north-south or oriented east-west. This means that, given two streets, they are either parallel or perpendicular to each other.
+
+All streets in the city are two-way and it is possible to follow any direction at an intersection.
+
+Now Maria is late for a meeting and needs your help. Given Maria's starting coordinates and the meeting coordinates, determine the minimum number of intersections Maria must cross to reach her destination. This number includes the intersection where the meeting will occur but does not include Maria's starting position.
+
+Input
+
+The only line of input contains four integers, Xm, Ym, Xr, Yr (0 <= Xm, Ym, Xr, Yr <= 1000), indicating the coordinates of Maria (Xm, Ym) and the meeting (Xr, Yr). Maria's starting point will never be the same as the meeting location, that is, at least one of the coordinates will be different.
+
+Output
+
+Your program must print a single line containing a single integer: the minimum number of intersections Maria needs to cross to reach the meeting location.
+
+Input Samples
+
+0 0 5 6
+
+52 75 120 75
+
+Output Samples
+
+11
+
+68

@@ -1,0 +1,258 @@
+TRANSCRIÇÃO INTEGRAL — 1141 Gemini, Execução 2, 1ª coleta (15/09/2026)
+FALHA DE ENTREGA: resposta fragmentada, indentação perdida.
+
+Conferida por checksum: 7824 caracteres, h = 97885522
+(h = (h*31 + charCodeAt(j)) % 1000000007, calculado na página e recalculado localmente)
+
+O texto abaixo é o innerText do contêiner .markdown da primeira resposta, EXATAMENTE
+como a interface renderizou. A indentação ausente nos trechos finais é o defeito
+registrado, não um erro de transcrição: o bloco de código não foi fechado e o
+restante foi renderizado como texto corrido.
+
+Pontos a observar:
+ 1. O primeiro bloco de código termina em 'pass' — a ferramenta abandonou a
+    própria solução no meio da resposta.
+ 2. Em seguida escreve "Wait, let's write the standard, optimal Python code...",
+    expondo a deliberação dentro da resposta, contrariando o prompt que pedia
+    apenas o código-fonte.
+ 3. A cerca de abertura do segundo bloco aparece literalmente como ```python
+    dentro de um parágrafo — ela não foi interpretada, e por isso o cabeçalho da
+    função saiu sem indentação:
+        def solve():
+        input_data = sys.stdin.read().split()
+        if not input_data:
+        return
+ 4. As duas últimas linhas saíram como "if name == 'main':" e "solve()" — os
+    underscores duplos de __name__ e __main__ foram consumidos pela ênfase do
+    markdown, o mesmo artefato observado no ChatGPT na Execução 1.
+
+Não foi submetido nada ao juiz. Nenhuma indentação foi reconstruída: consertar o
+código seria ajudar a ferramenta e invalidaria o dado.
+
+======================================================================
+
+Python
+import sys
+
+def solve():
+    input_data = sys.stdin.read().split()
+    if not input_data:
+        return
+    
+    idx = 0
+    out = []
+    
+    while idx < len(input_data):
+        n = int(input_data[idx])
+        idx += 1
+        if n == 0:
+            break
+            
+        strings = input_data[idx:idx+n]
+        idx += n
+        
+        # Sort strings by length
+        strings.sort(key=len)
+        
+        dp = [1] * n
+        string_to_id = {s: i for i, s in enumerate(strings)}
+        
+        for i in range(n):
+            s = strings[i]
+            m = len(s)
+            curr_dp = dp[i]
+            
+            # Find all proper substrings of s that exist in string_to_id
+            seen = set()
+            # 1. Substrings formed by removing 1 char from left or right
+            # These are the immediate predecessors in DAG for "growing" one character at a time.
+            # But wait, a string can grow by multiple characters. 
+            # However, in DAG, checking proper substrings of length m-1 is a known DP optimization.
+            # Actually, to find the longest chain ending at `s`, any valid predecessor `p` 
+            # is a substring of `s`.
+            # If `p` is a substring of `s`, then there exists a chain of substrings of `s` 
+            # formed by dropping 1 char at a time that leads down to `p`.
+            # So looking at `s[1:]` and `s[:-1]` and recursively/DP tracking is efficient.
+            # But even simpler: for string s, consider all its substrings of length m-1, 
+            # if they exist in our set, their dp value can transition to s.
+            # Is dropping 1 character at a time enough?
+            # Yes! If `p` is a substring of `s`, then there is a sequence of single-character 
+            # additions from `p` to `s`. If intermediate strings exist in the set, 
+            # they will be processed/checked. If they don't, the transition still holds transitively.
+            # Wait, if an intermediate string does NOT exist in the set, can we skip it?
+            # If we only check `s[1:]` and `s[:-1]`, what if `p` is a substring of `s` of length m-2,
+            # but neither `s[1:]` nor `s[:-1]` is in the set?
+            # Ah: `s[1:]` and `s[:-1]` might NOT be in the set, but `p` IS in `s[1:]` (or `s[:-1]`).
+            # So `dp[s]` should also be propagated from `s[1:]` and `s[:-1]` even if those exact strings 
+            # are not in `string_to_id`?
+            # No, if `s[1:]` is not in the set, its "virtual" DP value would be max(dp of its substrings).
+            
+            # Let's use Aho-Corasick or simple substring DP.
+            # Since sum of lengths <= 10^6 and max length <= 1000:
+            # We can use the Aho-Corasick automaton, or since we process in increasing order of length:
+            # Standard approach for Growing Strings:
+            # For each string `s`, look at `s[1:]` and `s[:-1]`. 
+            # If we store DP values for ALL substrings that appear during the process, or if we use Aho-Corasick.
+            
+            # Actually, Aho-Corasick is standard, but in Python, string matching with Aho-Corasick might need a custom implementation.
+            # Alternatively, since N <= 10000 and total length <= 10^6:
+            # A well-known DP trick for Growing Strings:
+            # Map each string to its DP value.
+            # When processing string s:
+            # For s, we can find all strings in the set that are substrings of s.
+            # But wait! Aho-Corasick on all N strings:
+            # Build AC automaton of all N strings.
+            # For each string s in increasing order of length:
+            #   Run AC automaton on s to find all matching pattern strings in the dictionary.
+            #   dp[s] = 1 + max(dp[p] for all p that are proper substrings of s)
+            # This is O(sum of lengths * alphabet + total matches).
+            
+            pass
+
+
+
+Wait, let's write the standard, optimal Python code for Growing Strings using Aho-Corasick or KMP / Substring DP.
+
+Let's double check Aho-Corasick implementation in Python:
+Since sum of lengths <= 10^6, building Aho-Corasick with a dict or fixed array for child nodes is very fast in Python.
+
+Let's refine the solution:
+We can build an Aho-Corasick automaton of all N strings.
+Each node in AC automaton will store string_id if a string ends at that node (or -1 if none).
+Also, each node can maintain a link dict_link (dictionary suffix link) to the nearest ancestor node in the suffix trie that represents a complete string from our input set.
+
+Algorithm:
+
+Sort strings by length.
+
+Build Trie for all strings.
+
+Build Failure links and Dictionary links (dictionary link points to the longest proper suffix that is a valid string end in our set).
+
+For each string s
+i
+	​
+
+ (from shortest to longest):
+
+Traverse s
+i
+	​
+
+ in the AC automaton.
+
+At each step/node, follow dictionary links to find all proper substrings of s
+i
+	​
+
+ that are in our input set.
+
+dp[i] = 1 + max(dp[j] for all valid substring indices j != i)
+
+Keep track of overall max DP.
+
+Let's write this cleanly and efficiently.```python
+import sys
+from collections import deque
+
+def solve():
+input_data = sys.stdin.read().split()
+if not input_data:
+return
+
+iterator = iter(input_data)
+out = []
+
+while True:
+    try:
+        n_str = next(iterator)
+    except StopIteration:
+        break
+    n = int(n_str)
+    if n == 0:
+        break
+        
+    strings = [next(iterator) for _ in range(n)]
+    
+    # Sort strings by length so we process shorter strings first
+    strings.sort(key=len)
+    
+    # Build Aho-Corasick Automaton
+    # Nodes will be represented as dicts or arrays for fast access.
+    # We use list of dicts for children to save memory/time.
+    children = [{}]
+    string_id = [-1]
+    
+    for i, s in enumerate(strings):
+        curr = 0
+        for char in s:
+            if char not in children[curr]:
+                children[curr][char] = len(children)
+                children.append({})
+                string_id.append(-1)
+            curr = children[curr][char]
+        string_id[curr] = i
+        
+    num_nodes = len(children)
+    fail = [0] * num_nodes
+    dict_link = [-1] * num_nodes
+    
+    queue = deque()
+    for char, child in children[0].items():
+        queue.append(child)
+        
+    while queue:
+        u = queue.popleft()
+        f = fail[u]
+        
+        if string_id[f] != -1:
+            dict_link[u] = f
+        else:
+            dict_link[u] = dict_link[f]
+            
+        for char, child in children[u].items():
+            # Find fail for child
+            temp = f
+            while temp > 0 and char not in children[temp]:
+                temp = fail[temp]
+            if char in children[temp]:
+                fail[child] = children[temp][char]
+            else:
+                fail[child] = 0
+            queue.append(child)
+            
+    dp = [1] * n
+    max_chain = 1
+    
+    for i, s in enumerate(strings):
+        curr = 0
+        best_prev = 0
+        
+        for idx, char in enumerate(s):
+            while curr > 0 and char not in children[curr]:
+                curr = fail[curr]
+            if char in children[curr]:
+                curr = children[curr][char]
+            else:
+                curr = 0
+                
+            # Check matching strings ending at current position
+            temp = curr
+            while temp != -1:
+                sid = string_id[temp]
+                if sid != -1 and sid != i:
+                    if dp[sid] > best_prev:
+                        best_prev = dp[sid]
+                temp = dict_link[temp]
+                
+        dp[i] = best_prev + 1
+        if dp[i] > max_chain:
+            max_chain = dp[i]
+            
+    out.append(str(max_chain))
+    
+print('\n'.join(out))
+
+
+if name == 'main':
+solve()

@@ -1,0 +1,75 @@
+import sys
+from collections import defaultdict
+
+def solve(points):
+    by_y = defaultdict(set)
+    xs = set()
+
+    for x, y in points:
+        by_y[y].add(x)
+        xs.add(x)
+
+    ys = sorted(by_y)
+    best = 0
+
+    for y in ys:
+        y2 = y + 2
+
+        if y2 not in by_y:
+            continue
+
+        low = by_y[y]
+        high = by_y[y2]
+
+        relevant_x = sorted(low | high)
+
+        end_low = 0
+        end_high = 0
+
+        for x in relevant_x:
+            has_low = x in low
+            has_high = x in high
+
+            old_low = end_low
+            old_high = end_high
+
+            if has_low:
+                end_low = max(
+                    old_low,
+                    old_high + 1 if old_high > 0 else 1
+                )
+
+            if has_high:
+                end_high = max(
+                    old_high,
+                    old_low + 1 if old_low > 0 else 1
+                )
+
+        best = max(best, end_low, end_high)
+
+    return best
+
+
+def main():
+    data = list(map(int, sys.stdin.buffer.read().split()))
+    pos = 0
+    ans = []
+
+    while pos < len(data):
+        n = data[pos]
+        pos += 1
+
+        points = []
+        for _ in range(n):
+            x = data[pos]
+            y = data[pos + 1]
+            pos += 2
+            points.append((x, y))
+
+        ans.append(str(solve(points)))
+
+    sys.stdout.write("\n".join(ans))
+
+
+if __name__ == "__main__":
+    main()

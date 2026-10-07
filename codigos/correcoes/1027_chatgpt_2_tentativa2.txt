@@ -1,0 +1,63 @@
+import sys
+from collections import defaultdict
+
+def solve(points):
+    points.sort()
+
+    dp = defaultdict(int)
+    best = 0
+
+    i = 0
+    n = len(points)
+
+    while i < n:
+        j = i
+        current = []
+
+        while j < n and points[j][0] == points[i][0]:
+            current.append(points[j][1])
+            j += 1
+
+        old = dict(dp)
+        updates = {}
+
+        for y in current:
+            opposite = y + 2
+            if opposite in old:
+                updates[y] = max(updates.get(y, 0), old[opposite] + 1)
+
+            if old.get(y, 0) == 0:
+                updates[y] = max(updates.get(y, 0), 1)
+
+        for y, value in updates.items():
+            dp[y] = max(dp[y], value)
+            best = max(best, dp[y])
+
+        i = j
+
+    return best
+
+
+def main():
+    data = list(map(int, sys.stdin.buffer.read().split()))
+    pos = 0
+    output = []
+
+    while pos < len(data):
+        n = data[pos]
+        pos += 1
+
+        points = []
+        for _ in range(n):
+            x = data[pos]
+            y = data[pos + 1]
+            pos += 2
+            points.append((x, y))
+
+        output.append(str(solve(points)))
+
+    sys.stdout.write("\n".join(output))
+
+
+if __name__ == "__main__":
+    main()

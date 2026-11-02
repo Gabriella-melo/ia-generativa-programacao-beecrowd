@@ -1,6 +1,6 @@
 # Ferramentas de IA generativa no apoio à programação
 
-Dados, prompts, códigos e scripts do artigo *Ferramentas de IA generativa no apoio à programação: uma análise comparativa da corretude, da autocorreção, da qualidade e da consistência do código gerado* (Gabriella Bastos Melo e Isadora Vieira da Silva, Fatec Franca, 2026).
+Dados, prompts, códigos e scripts do artigo *Ferramentas de IA generativa no apoio à programação: uma análise comparativa da corretude, da autocorreção, da qualidade e da consistência do código gerado* .
 
 O experimento submeteu 15 problemas do juiz online Beecrowd ao ChatGPT (GPT-5.6 Luna), ao Gemini (Gemini 3.6 Flash) e ao Claude (Claude Sonnet 5), nos planos gratuitos, em Python 3. Foram até três tentativas por problema e duas execuções, em 9 e 15 de setembro de 2026, num total de 90 coletas.
 
